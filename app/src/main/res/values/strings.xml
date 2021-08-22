@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Easy Drinks</string>
+    <string name="cocktail_avatar">cocktail_avatar</string>
+    <string name="drink_glass_type_text">Drink Glass Type:</string>
+    <string name="instructions_text">Instructions</string>
+    <string name="ingredients_text">Ingredients</string>
+    <string name="drinkImg">drinkImg</string>
+    <string name="drink_type_text">Drink Type:</string>
+    <string name="drink_category_text">Drink Category:</string>
+    <string name="drink_name_text">Drink Name</string>
+</resources>

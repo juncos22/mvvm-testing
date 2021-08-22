@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".DrinkDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/drinkDetailsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:titleTextColor="@color/textPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <ScrollView
+        android:id="@+id/scrollIngredients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/drinkImg"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher_round"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/card_color"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:contentDescription="@string/drinkImg" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="25dp"
+                app:cardBackgroundColor="@color/card_color">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/drinkName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Margarita"
+                        android:layout_marginTop="10dp"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="15dp"
+                        android:textColor="@color/textPrimary"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/drink_category_text"
+                            android:layout_marginEnd="5dp"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:textColor="@color/textPrimary"/>
+
+                        <TextView
+                            android:id="@+id/drinkCategory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cocktail"
+                            android:textSize="15sp"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/textSecondary" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/drink_type_text"
+                            android:layout_marginEnd="5dp"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:textColor="@color/textPrimary"/>
+
+                        <TextView
+                            android:id="@+id/drinkAlcoholic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Alcoholic"
+                            android:textSize="15sp"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/textSecondary" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/drink_glass_type_text"
+                            android:textColor="@color/textPrimary"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="5dp"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/drinkGlass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/textSecondary"
+                            android:text="Ordinary Glass"
+                            android:textSize="15sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredients_text"
+                android:textColor="@color/textPrimary"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+                <TextView
+                    android:id="@+id/drinkIngredient1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:text="@string/app_name"/>
+                <TextView
+                    android:id="@+id/drinkIngredient2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:text="@string/app_name"/>
+                <TextView
+                    android:id="@+id/drinkIngredient3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:text="@string/app_name"/>
+                <TextView
+                    android:id="@+id/drinkIngredient4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:text="@string/app_name"/>
+                <TextView
+                    android:id="@+id/drinkIngredient5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:text="@string/app_name"/>
+                <TextView
+                    android:id="@+id/drinkIngredient6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:text="@string/app_name"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/instructions_text"
+                android:textColor="@color/textPrimary"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/drinkInstructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="italic"
+                android:text="@string/app_name" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

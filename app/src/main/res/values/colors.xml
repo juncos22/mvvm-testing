@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lightPrimary">#B2EBF2</color>
+    <color name="primary">#00BCD4</color>
+    <color name="darkPrimary">#0097A7</color>
+
+    <color name="accent">#E040FB</color>
+    <color name="darkAccent">#9E2CB1</color>
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#757575</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="card_color">#B2EBF2</color>
+</resources>
